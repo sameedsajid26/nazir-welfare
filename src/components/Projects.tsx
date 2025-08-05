@@ -1,8 +1,14 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Droplets, Heart, Gift, ArrowRight, Star } from "lucide-react";
+import DonationModal from "./DonationModal";
+import JoinUsModal from "./JoinUsModal";
 
 const Projects = () => {
+  const [isDonationModalOpen, setIsDonationModalOpen] = useState(false);
+  const [isJoinUsModalOpen, setIsJoinUsModalOpen] = useState(false);
+
   const projects = [
     {
       icon: <Droplets className="w-8 h-8 text-primary" />,
@@ -97,7 +103,10 @@ const Projects = () => {
                   </ul>
                 </div>
 
-                <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground group">
+                <Button 
+                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground group"
+                  onClick={() => setIsDonationModalOpen(true)}
+                >
                   Support This Project
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
@@ -114,12 +123,26 @@ const Projects = () => {
             a water pump, supporting our Ramadan drives, or simply donating food and clothes, your 
             generosity transforms lives.
           </p>
-          <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
+          <Button 
+            size="lg" 
+            className="bg-accent hover:bg-accent/90 text-accent-foreground"
+            onClick={() => setIsJoinUsModalOpen(true)}
+          >
             <Heart className="w-5 h-5 mr-2" />
             Join Our Mission Today
           </Button>
         </div>
       </div>
+      
+      <DonationModal 
+        isOpen={isDonationModalOpen} 
+        onClose={() => setIsDonationModalOpen(false)} 
+      />
+      
+      <JoinUsModal 
+        isOpen={isJoinUsModalOpen} 
+        onClose={() => setIsJoinUsModalOpen(false)} 
+      />
     </section>
   );
 };

@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Heart, Droplets } from "lucide-react";
+import DonationModal from "./DonationModal";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDonationModalOpen, setIsDonationModalOpen] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -54,7 +56,10 @@ const Header = () => {
             >
               Contact
             </button>
-            <Button className="bg-accent hover:bg-accent/90 text-accent-foreground">
+            <Button 
+              className="bg-accent hover:bg-accent/90 text-accent-foreground"
+              onClick={() => setIsDonationModalOpen(true)}
+            >
               <Heart className="w-4 h-4 mr-2" />
               Donate Now
             </Button>
@@ -97,7 +102,10 @@ const Header = () => {
               >
                 Contact
               </button>
-              <Button className="bg-accent hover:bg-accent/90 text-accent-foreground w-full">
+              <Button 
+                className="bg-accent hover:bg-accent/90 text-accent-foreground w-full"
+                onClick={() => setIsDonationModalOpen(true)}
+              >
                 <Heart className="w-4 h-4 mr-2" />
                 Donate Now
               </Button>
@@ -105,6 +113,11 @@ const Header = () => {
           </nav>
         )}
       </div>
+      
+      <DonationModal 
+        isOpen={isDonationModalOpen} 
+        onClose={() => setIsDonationModalOpen(false)} 
+      />
     </header>
   );
 };

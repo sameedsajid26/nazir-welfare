@@ -1,7 +1,18 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Heart, Droplets, Users, Gift } from "lucide-react";
+import DonationModal from "./DonationModal";
 
 const Hero = () => {
+  const [isDonationModalOpen, setIsDonationModalOpen] = useState(false);
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="home" className="relative py-20 overflow-hidden">
       {/* Background gradient */}
@@ -26,11 +37,20 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 py-6">
+            <Button 
+              size="lg" 
+              className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 py-6"
+              onClick={() => setIsDonationModalOpen(true)}
+            >
               <Heart className="w-5 h-5 mr-2" />
               Donate Now
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-6">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="text-lg px-8 py-6"
+              onClick={() => scrollToSection('projects')}
+            >
               Learn More About Our Work
             </Button>
           </div>
@@ -63,6 +83,11 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      
+      <DonationModal 
+        isOpen={isDonationModalOpen} 
+        onClose={() => setIsDonationModalOpen(false)} 
+      />
     </section>
   );
 };

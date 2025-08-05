@@ -1,8 +1,11 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Droplets, Heart, Mail, Phone, MapPin, Facebook, Twitter, Instagram } from "lucide-react";
+import DonationModal from "./DonationModal";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const [isDonationModalOpen, setIsDonationModalOpen] = useState(false);
 
   return (
     <footer className="bg-foreground text-background">
@@ -23,7 +26,10 @@ const Footer = () => {
               A beacon of hope and catalyst for community change, dedicated to transforming 
               lives through clean water, nourishing meals, and dignified support.
             </p>
-            <Button className="bg-accent hover:bg-accent/90 text-accent-foreground">
+            <Button 
+              className="bg-accent hover:bg-accent/90 text-accent-foreground"
+              onClick={() => setIsDonationModalOpen(true)}
+            >
               <Heart className="w-4 h-4 mr-2" />
               Donate Now
             </Button>
@@ -163,6 +169,11 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      
+      <DonationModal 
+        isOpen={isDonationModalOpen} 
+        onClose={() => setIsDonationModalOpen(false)} 
+      />
     </footer>
   );
 };

@@ -1,8 +1,33 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Heart, Users, HandHeart, Share2, Banknote, Clock } from "lucide-react";
+import DonationModal from "./DonationModal";
+import JoinUsModal from "./JoinUsModal";
 
 const HowToHelp = () => {
+  const [isDonationModalOpen, setIsDonationModalOpen] = useState(false);
+  const [isJoinUsModalOpen, setIsJoinUsModalOpen] = useState(false);
+
+  const handleHelpClick = (actionType: string) => {
+    if (actionType.includes("Donation") || actionType.includes("Monthly") || actionType.includes("Fundraising")) {
+      setIsDonationModalOpen(true);
+    } else if (actionType.includes("Volunteer") || actionType.includes("Partnership")) {
+      setIsJoinUsModalOpen(true);
+    } else if (actionType.includes("Share")) {
+      // Share functionality
+      if (navigator.share) {
+        navigator.share({
+          title: 'Nazir Welfare - Making a Difference',
+          text: 'Join us in transforming lives through clean water, nourishment, and dignity.',
+          url: window.location.href
+        });
+      } else {
+        navigator.clipboard.writeText(window.location.href);
+      }
+    }
+  };
+
   const helpWays = [
     {
       icon: <Banknote className="w-6 h-6 text-primary" />,
@@ -92,6 +117,7 @@ const HowToHelp = () => {
                 <Button 
                   variant={way.highlight ? "default" : "outline"}
                   className={`w-full ${way.highlight ? 'bg-accent hover:bg-accent/90 text-accent-foreground' : ''}`}
+                  onClick={() => handleHelpClick(way.action)}
                 >
                   {way.action}
                 </Button>
@@ -123,6 +149,16 @@ const HowToHelp = () => {
           </p>
         </div>
       </div>
+      
+      <DonationModal 
+        isOpen={isDonationModalOpen} 
+        onClose={() => setIsDonationModalOpen(false)} 
+      />
+      
+      <JoinUsModal 
+        isOpen={isJoinUsModalOpen} 
+        onClose={() => setIsJoinUsModalOpen(false)} 
+      />
     </section>
   );
 };
