@@ -1,36 +1,50 @@
-import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Heart, Droplets, Gift } from "lucide-react";
+import { Heart, Droplets } from "lucide-react";
 
 const PhotoGallery = () => {
+
   const photos = [
     {
-      src: "/water-pump-project-1.jpg",
-      alt: "Water pump installation bringing clean water to rural community",
+      src: "/pump1.jpg",
+      alt: "Water pump installation serving the community",
       category: "Water Projects",
-      description: "New water pump installation in village Mahmoodabad",
+      description: "Hand pump bringing clean water to families",
       icon: <Droplets className="w-4 h-4" />
     },
     {
-      src: "/food-distribution-1.jpg",
-      alt: "Food distribution drive serving families in need",
-      category: "Food Distribution",
-      description: "Community food distribution program",
-      icon: <Gift className="w-4 h-4" />
-    },
-    {
-      src: "/water-pump-project-2.jpg",
-      alt: "Children accessing clean water from community pump",
-      category: "Water Projects", 
-      description: "Children celebrating access to clean water",
+      src: "/pump2.jpg",
+      alt: "Community water pump installation",
+      category: "Water Projects",
+      description: "Transforming lives through clean water",
       icon: <Droplets className="w-4 h-4" />
     },
     {
-      src: "/ramadan-iftar-1.jpg",
-      alt: "Ramadan iftar distribution bringing community together",
-      category: "Ramadan Drive",
-      description: "Iftar distribution during holy month of Ramadan",
+      src: "/seher.png",
+      alt: "Community sehri gathering",
+      category: "Community",
+      description: "Sharing pre-dawn meals together",
       icon: <Heart className="w-4 h-4" />
+    },
+    {
+      src: "/pump3.jpg",
+      alt: "Water pump project completion",
+      category: "Water Projects", 
+      description: "Community celebrating new water source",
+      icon: <Droplets className="w-4 h-4" />
+    },
+    {
+      src: "/wudu-place.jpg",
+      alt: "Wudu facility construction",
+      category: "Community",
+      description: "Building facilities for spiritual cleanliness",
+      icon: <Heart className="w-4 h-4" />
+    },
+    {
+      src: "/pump5.jpg",
+      alt: "Water pump serving village",
+      category: "Water Projects",
+      description: "Clean water for entire neighborhoods",
+      icon: <Droplets className="w-4 h-4" />
     }
   ];
 
@@ -47,42 +61,65 @@ const PhotoGallery = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Clean 3-column Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {photos.map((photo, index) => (
-            <Card key={index} className="group overflow-hidden hover:shadow-lg transition-all duration-300">
-              <div className="relative overflow-hidden">
-                <img
-                  src={photo.src}
-                  alt={photo.alt}
-                  className="w-full h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute top-4 left-4">
-                  <Badge className="bg-background/90 text-foreground border-border">
+            <div 
+              key={index} 
+              className="group relative overflow-hidden rounded-xl aspect-[4/3]"
+            >
+              <img
+                src={photo.src}
+                alt={photo.alt}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              {/* Always visible gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent">
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  <Badge className="bg-white/20 backdrop-blur-sm text-white border-0 mb-2">
                     <span className="flex items-center gap-2">
                       {photo.icon}
                       {photo.category}
                     </span>
                   </Badge>
+                  <p className="text-white font-medium text-sm drop-shadow-lg">{photo.description}</p>
                 </div>
-                {/* Gradient overlay */}
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent h-24"></div>
               </div>
-              
-              <CardContent className="p-6">
-                <h3 className="font-semibold text-lg mb-2">{photo.description}</h3>
-                <p className="text-muted-foreground text-sm">
-                  Your support makes these moments of transformation possible. Each project 
-                  creates lasting change in the lives of families and communities.
-                </p>
-              </CardContent>
-            </Card>
+            </div>
           ))}
         </div>
 
-        <div className="mt-16 text-center bg-secondary/20 rounded-xl p-8">
+        {/* Video Showcase */}
+        <div className="mt-16">
+          <h3 className="text-2xl font-bold text-center mb-8">See Our Impact in Motion</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="relative rounded-xl overflow-hidden bg-black aspect-video">
+              <video 
+                className="w-full h-full object-cover"
+                controls
+                poster="/pump4.jpg"
+              >
+                <source src="/vid1.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div className="relative rounded-xl overflow-hidden bg-black aspect-video">
+              <video 
+                className="w-full h-full object-cover"
+                controls
+                poster="/pump6.jpeg"
+              >
+                <source src="/vid2.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-16 text-center bg-gradient-to-r from-primary/10 via-accent/5 to-primary/10 rounded-xl p-8">
           <h3 className="text-2xl font-bold mb-4">Real Stories, Real Impact</h3>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            These photos represent just a fraction of the lives touched by Nazir Welfare. 
+            These photos and videos represent just a fraction of the lives touched by Nazir Welfare. 
             Behind each image is a family with renewed hope, a community with better access 
             to essential resources, and the beautiful spirit of giving that connects us all.
           </p>

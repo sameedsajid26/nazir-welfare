@@ -1,28 +1,13 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Droplets, Heart, Gift, ArrowRight, Star } from "lucide-react";
+import { Droplets, Heart, Gift, Star } from "lucide-react";
 import DonationModal from "./DonationModal";
-import JoinUsModal from "./JoinUsModal";
 
 const Projects = () => {
   const [isDonationModalOpen, setIsDonationModalOpen] = useState(false);
-  const [isJoinUsModalOpen, setIsJoinUsModalOpen] = useState(false);
 
   const projects = [
-    {
-      icon: <Droplets className="w-8 h-8 text-primary" />,
-      title: "Water Hand Pump Installations",
-      price: "18,000 PKR",
-      description: "Every community deserves easy access to clean water. We install water hand pumps in areas where water scarcity is an everyday challenge.",
-      impact: "One pump brings life and opportunity to an entire community.",
-      features: [
-        "Clean, accessible water for entire communities",
-        "Reduces water-related diseases",
-        "Empowers women and children",
-        "Long-lasting community impact"
-      ]
-    },
     {
       icon: <Heart className="w-8 h-8 text-accent" />,
       title: "Ramadan Iftar and Sehri Drives",
@@ -34,6 +19,19 @@ const Projects = () => {
         "Pre-dawn sehri distributions",
         "Fostering unity and brotherhood",
         "Blessing families during Ramadan"
+      ]
+    },
+    {
+      icon: <Droplets className="w-8 h-8 text-primary" />,
+      title: "Water Hand Pump Installations",
+      price: "18,000 PKR",
+      description: "Every community deserves easy access to clean water. We install water hand pumps in areas where water scarcity is an everyday challenge.",
+      impact: "One pump brings life and opportunity to an entire community.",
+      features: [
+        "Clean, accessible water for entire communities",
+        "Reduces water-related diseases",
+        "Empowers women and children",
+        "Long-lasting community impact"
       ]
     },
     {
@@ -82,11 +80,11 @@ const Projects = () => {
                   {project.description}
                 </CardDescription>
                 
-                <div className="bg-accent/10 rounded-lg p-4">
+                <div className="bg-primary/10 rounded-lg p-4">
                   <div className="flex items-start gap-3">
-                    <Star className="w-5 h-5 text-accent mt-0.5" />
-                    <p className="text-sm font-medium text-accent-foreground">
-                      <strong>Impact:</strong> {project.impact}
+                    <Star className="w-5 h-5 text-primary mt-0.5" />
+                    <p className="text-sm font-medium text-foreground">
+                      <strong className="text-primary">Impact:</strong> {project.impact}
                     </p>
                   </div>
                 </div>
@@ -102,34 +100,26 @@ const Projects = () => {
                     ))}
                   </ul>
                 </div>
-
-                <Button 
-                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground group"
-                  onClick={() => setIsDonationModalOpen(true)}
-                >
-                  Support This Project
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
               </CardContent>
             </Card>
           ))}
         </div>
 
-        {/* Call to action */}
-        <div className="text-center bg-card border border-border rounded-xl p-8">
-          <h3 className="text-2xl font-bold mb-4">Ready to Make a Difference?</h3>
-          <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+        {/* Single Call to Action */}
+        <div className="text-center bg-gradient-to-r from-primary/10 via-accent/5 to-primary/10 border border-border rounded-xl p-10">
+          <h3 className="text-2xl md:text-3xl font-bold mb-4">Ready to Make a Difference?</h3>
+          <p className="text-muted-foreground mb-8 max-w-2xl mx-auto text-lg">
             At Nazir Welfare, every small contribution creates a monumental change. Whether it's funding 
-            a water pump, supporting our Ramadan drives, or simply donating food and clothes, your 
+            a water pump, supporting our Ramadan drives, or simply donating food and clothes — your 
             generosity transforms lives.
           </p>
           <Button 
             size="lg" 
-            className="bg-accent hover:bg-accent/90 text-accent-foreground"
-            onClick={() => setIsJoinUsModalOpen(true)}
+            className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-10 py-6"
+            onClick={() => setIsDonationModalOpen(true)}
           >
             <Heart className="w-5 h-5 mr-2" />
-            Join Our Mission Today
+            Support Our Projects
           </Button>
         </div>
       </div>
@@ -137,11 +127,6 @@ const Projects = () => {
       <DonationModal 
         isOpen={isDonationModalOpen} 
         onClose={() => setIsDonationModalOpen(false)} 
-      />
-      
-      <JoinUsModal 
-        isOpen={isJoinUsModalOpen} 
-        onClose={() => setIsJoinUsModalOpen(false)} 
       />
     </section>
   );

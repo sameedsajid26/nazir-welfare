@@ -21,10 +21,10 @@ const DonationModal = ({ isOpen, onClose }: DonationModalProps) => {
   const { toast } = useToast();
 
   const accountDetails = {
-    bankName: "Meezan Bank Limited",
-    accountTitle: "Nazir Welfare Organization",
-    accountNumber: "0123456789012345",
-    iban: "PK12MEZN0001234567890123",
+    bankName: "AL BARAKA",
+    accountTitle: "SAJID HAMEED",
+    accountNumber: "00102346006501",
+    iban: "PK64AIIN0000102346006501",
   };
 
   const copyToClipboard = (text: string, field: string) => {

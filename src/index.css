@@ -8,106 +8,117 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Warm, compassionate color palette for Nazir Welfare */
-    --background: 46 100% 97%;
-    --foreground: 15 25% 25%;
+    /* Vibrant, warm palette for Nazir Welfare */
+    /* Rich teal + warm coral - trustworthy & energetic */
+    --background: 45 40% 97%;
+    --foreground: 200 30% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 15 25% 25%;
+    --card-foreground: 200 30% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 15 25% 25%;
+    --popover-foreground: 200 30% 15%;
 
-    /* Warm blue-green primary color representing water and hope */
-    --primary: 200 75% 45%;
+    /* Rich teal - represents water, growth, hope */
+    --primary: 175 70% 35%;
     --primary-foreground: 0 0% 100%;
 
-    /* Warm beige secondary color representing warmth and comfort */
-    --secondary: 45 50% 88%;
-    --secondary-foreground: 15 25% 25%;
+    /* Warm cream secondary */
+    --secondary: 40 35% 92%;
+    --secondary-foreground: 200 30% 15%;
 
-    --muted: 45 20% 92%;
-    --muted-foreground: 15 15% 55%;
+    --muted: 40 25% 92%;
+    --muted-foreground: 200 15% 40%;
 
-    /* Warm orange accent representing compassion and energy */
-    --accent: 25 85% 65%;
+    /* Vibrant coral accent - represents warmth, energy, compassion */
+    --accent: 12 85% 55%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 45 30% 85%;
-    --input: 45 30% 90%;
-    --ring: 200 75% 45%;
+    --border: 40 25% 85%;
+    --input: 40 25% 90%;
+    --ring: 175 70% 35%;
 
     /* Additional welfare-themed colors */
-    --success: 142 76% 36%;
+    --success: 155 75% 40%;
     --success-foreground: 0 0% 100%;
     
-    --warm-orange: 25 85% 65%;
-    --warm-blue: 200 75% 45%;
-    --earth-brown: 30 25% 35%;
-    --hope-green: 142 76% 36%;
+    --coral: 12 85% 55%;
+    --teal: 175 70% 35%;
+    --earth-brown: 25 35% 25%;
+    --sage: 155 40% 50%;
 
-    --gradient-primary: linear-gradient(135deg, hsl(200 75% 45%), hsl(142 76% 36%));
-    --gradient-warm: linear-gradient(135deg, hsl(25 85% 65%), hsl(45 85% 75%));
+    --gradient-primary: linear-gradient(135deg, hsl(175 70% 35%), hsl(155 75% 40%));
+    --gradient-warm: linear-gradient(135deg, hsl(12 85% 55%), hsl(25 80% 60%));
     
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 40 25% 97%;
+    --sidebar-foreground: 165 35% 20%;
+    --sidebar-primary: 168 65% 32%;
+    --sidebar-primary-foreground: 40 33% 98%;
+    --sidebar-accent: 35 25% 92%;
+    --sidebar-accent-foreground: 165 35% 15%;
+    --sidebar-border: 35 20% 85%;
+    --sidebar-ring: 168 65% 40%;
   }
 
   .dark {
-    --background: 15 25% 8%;
-    --foreground: 46 100% 95%;
+    /* Dark mode - deep ocean with warm coral accents */
+    --background: 200 35% 8%;
+    --foreground: 45 40% 95%;
 
-    --card: 15 25% 12%;
-    --card-foreground: 46 100% 95%;
+    --card: 200 30% 12%;
+    --card-foreground: 45 40% 95%;
 
-    --popover: 15 25% 12%;
-    --popover-foreground: 46 100% 95%;
+    --popover: 200 30% 12%;
+    --popover-foreground: 45 40% 95%;
 
-    --primary: 200 75% 55%;
+    --primary: 175 65% 45%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 30 15% 18%;
-    --secondary-foreground: 46 100% 95%;
+    --secondary: 200 25% 16%;
+    --secondary-foreground: 45 40% 95%;
 
-    --muted: 30 15% 18%;
-    --muted-foreground: 45 20% 65%;
+    --muted: 200 25% 16%;
+    --muted-foreground: 45 20% 60%;
 
-    --accent: 25 85% 60%;
+    --accent: 12 80% 58%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 62.8% 50%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 65% 52%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 30 15% 25%;
-    --input: 30 15% 25%;
-    --ring: 200 75% 55%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --border: 200 25% 20%;
+    --input: 200 25% 20%;
+    --ring: 175 65% 45%;
+    
+    --success: 155 65% 45%;
+    --success-foreground: 0 0% 100%;
+
+    --sidebar-background: 200 35% 9%;
+    --sidebar-foreground: 45 40% 92%;
+    --sidebar-primary: 175 65% 45%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 200 25% 15%;
+    --sidebar-accent-foreground: 45 40% 92%;
+    --sidebar-border: 200 25% 18%;
+    --sidebar-ring: 175 65% 50%;
   }
+
+  .dark body {
+    background: 
+      radial-gradient(ellipse 80% 50% at 20% 40%, hsla(175, 70%, 25%, 0.2) 0%, transparent 50%),
+      radial-gradient(ellipse 60% 40% at 80% 20%, hsla(12, 70%, 30%, 0.15) 0%, transparent 50%),
+      radial-gradient(ellipse 50% 60% at 70% 80%, hsla(175, 50%, 20%, 0.15) 0%, transparent 50%),
+      linear-gradient(180deg, hsl(200, 35%, 8%) 0%, hsl(200, 30%, 10%) 50%, hsl(200, 35%, 8%) 100%);
+  }
+
+  .dark .blob-1 { background: hsl(175, 60%, 25%); opacity: 0.2; }
+  .dark .blob-2 { background: hsl(12, 60%, 30%); opacity: 0.15; }
+  .dark .blob-3 { background: hsl(155, 50%, 25%); opacity: 0.15; }
 }
 
 @layer base {
@@ -116,7 +127,14 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply text-foreground font-sans;
+    background: 
+      radial-gradient(ellipse 80% 50% at 20% 40%, hsla(175, 70%, 85%, 0.3) 0%, transparent 50%),
+      radial-gradient(ellipse 60% 40% at 80% 20%, hsla(12, 85%, 88%, 0.25) 0%, transparent 50%),
+      radial-gradient(ellipse 50% 60% at 70% 80%, hsla(175, 60%, 90%, 0.2) 0%, transparent 50%),
+      linear-gradient(180deg, hsl(45, 40%, 98%) 0%, hsl(40, 35%, 96%) 50%, hsl(45, 40%, 97%) 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -137,4 +155,58 @@ All colors MUST be HSL.
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+}
+
+/* Animated background blobs for hero and special sections */
+@keyframes blob-float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(20px, -30px) scale(1.05); }
+  50% { transform: translate(-20px, 20px) scale(0.95); }
+  75% { transform: translate(30px, 10px) scale(1.02); }
+}
+
+.blob-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+  animation: blob-float 20s ease-in-out infinite;
+}
+
+.blob-1 {
+  width: 600px;
+  height: 600px;
+  background: hsl(175, 70%, 80%);
+  top: -200px;
+  left: -100px;
+  animation-delay: 0s;
+}
+
+.blob-2 {
+  width: 500px;
+  height: 500px;
+  background: hsl(12, 80%, 85%);
+  top: 50%;
+  right: -150px;
+  animation-delay: -5s;
+}
+
+.blob-3 {
+  width: 400px;
+  height: 400px;
+  background: hsl(155, 60%, 85%);
+  bottom: -100px;
+  left: 30%;
+  animation-delay: -10s;
 }

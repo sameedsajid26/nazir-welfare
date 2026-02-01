@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Heart, Droplets } from "lucide-react";
+import { Menu, X, Heart } from "lucide-react";
 import DonationModal from "./DonationModal";
 
 const Header = () => {
@@ -21,12 +21,12 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-primary-foreground">
-              <Droplets className="w-6 h-6" />
-            </div>
-            <div>
-              <h1 className="text-xl font-bold text-foreground">Nazir Welfare</h1>
-              <p className="text-xs text-muted-foreground">Water • Nourishment • Dignity</p>
+            <div className="h-14 md:h-16 flex-shrink-0">
+              <img 
+                src="/logo-final.png" 
+                alt="Nazir Welfare" 
+                className="h-full w-auto object-contain"
+              />
             </div>
           </div>
 
@@ -39,16 +39,22 @@ const Header = () => {
               Home
             </button>
             <button
+              onClick={() => scrollToSection('donate')}
+              className="text-foreground hover:text-primary transition-colors"
+            >
+              Donate
+            </button>
+            <button
+              onClick={() => scrollToSection('ramadan-donation')}
+              className="text-amber-600 dark:text-amber-400 font-medium hover:text-amber-700 transition-colors"
+            >
+              🌙 Ramadan
+            </button>
+            <button
               onClick={() => scrollToSection('projects')}
               className="text-foreground hover:text-primary transition-colors"
             >
-              Our Projects
-            </button>
-            <button
-              onClick={() => scrollToSection('help')}
-              className="text-foreground hover:text-primary transition-colors"
-            >
-              How to Help
+              Projects
             </button>
             <button
               onClick={() => scrollToSection('contact')}
@@ -61,7 +67,7 @@ const Header = () => {
               onClick={() => setIsDonationModalOpen(true)}
             >
               <Heart className="w-4 h-4 mr-2" />
-              Donate Now
+              Bank Details
             </Button>
           </nav>
 
@@ -85,16 +91,22 @@ const Header = () => {
                 Home
               </button>
               <button
+                onClick={() => scrollToSection('donate')}
+                className="text-left text-foreground hover:text-primary transition-colors"
+              >
+                Donate
+              </button>
+              <button
+                onClick={() => scrollToSection('ramadan-donation')}
+                className="text-left text-amber-600 dark:text-amber-400 font-medium hover:text-amber-700 transition-colors"
+              >
+                🌙 Ramadan Donation
+              </button>
+              <button
                 onClick={() => scrollToSection('projects')}
                 className="text-left text-foreground hover:text-primary transition-colors"
               >
-                Our Projects
-              </button>
-              <button
-                onClick={() => scrollToSection('help')}
-                className="text-left text-foreground hover:text-primary transition-colors"
-              >
-                How to Help
+                Projects
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
@@ -107,7 +119,7 @@ const Header = () => {
                 onClick={() => setIsDonationModalOpen(true)}
               >
                 <Heart className="w-4 h-4 mr-2" />
-                Donate Now
+                Bank Details
               </Button>
             </div>
           </nav>

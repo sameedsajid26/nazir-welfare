@@ -1,25 +1,28 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Quote, Star, Heart } from "lucide-react";
+import { Quote, Star, Heart, Droplets, Users, Gift } from "lucide-react";
 
 const Stories = () => {
   const testimonials = [
     {
       name: "Fatima Bibi",
       location: "Village Mahmoodabad",
-      story: "Before the water pump installation, my children and I had to walk 2 kilometers every day just to fetch water. Now, clean water is just steps away from our home. This has given us time to focus on education and work. Allah bless Nazir Welfare for this life-changing gift.",
-      impact: "Water Hand Pump Project"
+      story: "The water pump installed by Nazir Welfare has transformed our entire community. Now, over 50 families have easy access to clean water right in our neighborhood.",
+      impact: "Water Hand Pump Project",
+      icon: <Droplets className="w-5 h-5 text-primary" />
     },
     {
       name: "Mohammad Ali",
       location: "Karachi",
-      story: "During last Ramadan, when we had no food to break our fast, Nazir Welfare came to our aid. The iftar drive not only filled our stomachs but also filled our hearts with hope. We felt the true spirit of community and brotherhood.",
-      impact: "Ramadan Iftar Drive"
+      story: "Last Ramadan, Nazir Welfare organized a beautiful iftar gathering in our area. Over 200 families came together to break their fast. It wasn't just about the food - it was about unity, community spirit, and the joy of sharing.",
+      impact: "Ramadan Iftar Drive",
+      icon: <Gift className="w-5 h-5 text-accent" />
     },
     {
       name: "Ayesha Begum",
       location: "Lahore",
-      story: "After my husband's accident, we struggled to even buy clothes for our children. Nazir Welfare's clothing distribution program provided my family with dignity and warmth. We are forever grateful for their compassionate support.",
-      impact: "Clothing Distribution"
+      story: "When Nazir Welfare distributed clothes in our school it brought so much happiness to families. Students and teaches received eid clothes, and parents got quality garments for daily wear. The community feels valued and cared for.",
+      impact: "Clothing Distribution",
+      icon: <Users className="w-5 h-5" style={{color: "hsl(var(--success))"}} />
     }
   ];
 
@@ -28,11 +31,11 @@ const Stories = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Stories of <span className="text-gradient">Hope</span> and Change
+            Stories of <span className="text-gradient">Hope</span> and Impact
           </h2>
           <p className="text-lg text-muted-foreground">
-            Behind every project is a human story. These are the voices of the communities 
-            we serve, sharing how your support has transformed their lives.
+            See how our work has transformed communities and brought positive change. 
+            These stories reflect the real impact of your support on families and neighborhoods.
           </p>
         </div>
 
@@ -56,10 +59,12 @@ const Stories = () => {
                 </p>
                 
                 <div className="flex items-center gap-2 pt-4 border-t border-border">
-                  <Heart className="w-4 h-4 text-accent" />
-                  <span className="text-sm font-medium text-accent">
-                    {testimonial.impact}
-                  </span>
+                  <div className="flex items-center gap-2">
+                    {testimonial.icon}
+                    <span className="text-sm font-medium text-accent">
+                      {testimonial.impact}
+                    </span>
+                  </div>
                 </div>
                 
                 {/* Star rating */}
@@ -75,7 +80,7 @@ const Stories = () => {
 
         {/* Community impact stats */}
         <div className="bg-card border border-border rounded-xl p-8">
-          <h3 className="text-2xl font-bold text-center mb-8">Community Impact</h3>
+          <h3 className="text-2xl font-bold text-center mb-8">Our Community Impact</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
               <div className="text-2xl md:text-3xl font-bold text-primary mb-2">500+</div>
