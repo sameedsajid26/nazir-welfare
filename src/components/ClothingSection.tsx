@@ -1,5 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Shirt, Heart, Users, Gift, Sparkles } from "lucide-react";
+import { asset } from "@/lib/assets";
+import { mediaPaths } from "@/lib/media";
 
 const ClothingSection = () => {
   const initiatives = [
@@ -50,7 +52,7 @@ const ClothingSection = () => {
         {/* Featured Image */}
         <div className="relative max-w-4xl mx-auto mb-12 rounded-2xl overflow-hidden shadow-2xl">
           <img 
-            src="/clothing-drive.png" 
+            src={asset(mediaPaths.clothingDrive)} 
             alt="Clothing Distribution Drive" 
             className="w-full h-80 md:h-96 object-cover"
           />

@@ -1,3 +1,8 @@
+# Environment (secrets)
+.env
+.env.local
+.env.*.local
+
 # Logs
 logs
 *.log
@@ -25,3 +30,10 @@ dist-ssr
 
 # Source media (site uses public/ assets)
 media/
+
+# Optional: uncomment to keep large assets out of repo when using VITE_ASSETS_URL (CDN)
+# public/*.mp4
+# public/*.png
+# public/*.jpg
+# public/*.jpeg
+# !public/logo-final.png

@@ -1,4 +1,5 @@
 import { Phone, Instagram } from "lucide-react";
+import { media } from "@/lib/media";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -18,7 +19,7 @@ const Footer = () => {
           <div className="flex items-center gap-3">
             <div className="h-20 flex-shrink-0">
               <img 
-                src="/logo-final.png" 
+                src={media.logoFinal} 
                 alt="Nazir Welfare" 
                 className="h-full w-auto object-contain"
               />

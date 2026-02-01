@@ -1,46 +1,46 @@
 import { Badge } from "@/components/ui/badge";
 import { Heart, Droplets } from "lucide-react";
+import { media } from "@/lib/media";
 
 const PhotoGallery = () => {
-
   const photos = [
     {
-      src: "/pump1.jpg",
+      src: media.pump1,
       alt: "Water pump installation serving the community",
       category: "Water Projects",
       description: "Hand pump bringing clean water to families",
       icon: <Droplets className="w-4 h-4" />
     },
     {
-      src: "/pump2.jpg",
+      src: media.pump2,
       alt: "Community water pump installation",
       category: "Water Projects",
       description: "Transforming lives through clean water",
       icon: <Droplets className="w-4 h-4" />
     },
     {
-      src: "/seher.png",
+      src: media.seher,
       alt: "Community sehri gathering",
       category: "Community",
       description: "Sharing pre-dawn meals together",
       icon: <Heart className="w-4 h-4" />
     },
     {
-      src: "/pump3.jpg",
+      src: media.pump3,
       alt: "Water pump project completion",
-      category: "Water Projects", 
+      category: "Water Projects",
       description: "Community celebrating new water source",
       icon: <Droplets className="w-4 h-4" />
     },
     {
-      src: "/wudu-place.jpg",
+      src: media.wuduPlace,
       alt: "Wudu facility construction",
       category: "Community",
       description: "Building facilities for spiritual cleanliness",
       icon: <Heart className="w-4 h-4" />
     },
     {
-      src: "/pump5.jpg",
+      src: media.pump5,
       alt: "Water pump serving village",
       category: "Water Projects",
       description: "Clean water for entire neighborhoods",
@@ -97,9 +97,9 @@ const PhotoGallery = () => {
               <video 
                 className="w-full h-full object-cover"
                 controls
-                poster="/pump4.jpg"
+                poster={media.pump4}
               >
-                <source src="/vid1.mp4" type="video/mp4" />
+                <source src={media.vid1} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
@@ -107,9 +107,9 @@ const PhotoGallery = () => {
               <video 
                 className="w-full h-full object-cover"
                 controls
-                poster="/pump6.jpeg"
+                poster={media.pump6}
               >
-                <source src="/vid2.mp4" type="video/mp4" />
+                <source src={media.vid2} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>

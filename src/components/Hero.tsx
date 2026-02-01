@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Heart, Droplets, Users, Gift } from "lucide-react";
+import { media } from "@/lib/media";
 import DonationModal from "./DonationModal";
 
 const Hero = () => {
@@ -18,7 +19,7 @@ const Hero = () => {
       {/* Video/Image Background */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="/pump4.jpg" 
+          src={media.pump4} 
           alt="Water pump installation" 
           className="w-full h-full object-cover"
         />

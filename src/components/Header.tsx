@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Heart } from "lucide-react";
+import { media } from "@/lib/media";
 import DonationModal from "./DonationModal";
 
 const Header = () => {
@@ -23,7 +24,7 @@ const Header = () => {
           <div className="flex items-center gap-3">
             <div className="h-14 md:h-16 flex-shrink-0">
               <img 
-                src="/logo-final.png" 
+                src={media.logoFinal} 
                 alt="Nazir Welfare" 
                 className="h-full w-auto object-contain"
               />
