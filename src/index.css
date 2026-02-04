@@ -128,7 +128,7 @@ All colors MUST be HSL.
 
   /* Slightly larger body text; headings compensated below so they stay the same size */
   html {
-    font-size: 1.125rem; /* 18px (was 16px) */
+    font-size: 1rem; /* 16px – default */
   }
 
   body {
