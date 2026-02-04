@@ -1,7 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Shirt, Heart, Users, Gift, Sparkles } from "lucide-react";
-import { asset } from "@/lib/assets";
-import { mediaPaths } from "@/lib/media";
+import { media } from "@/lib/media";
 
 const ClothingSection = () => {
   const initiatives = [
@@ -49,17 +48,27 @@ const ClothingSection = () => {
           </p>
         </div>
 
-        {/* Featured Image */}
-        <div className="relative max-w-4xl mx-auto mb-12 rounded-2xl overflow-hidden shadow-2xl">
-          <img 
-            src={asset(mediaPaths.clothingDrive)} 
-            alt="Clothing Distribution Drive" 
-            className="w-full h-80 md:h-96 object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-          <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-            <h3 className="text-white text-2xl md:text-3xl font-bold mb-2">Our Clothing Drives in Action</h3>
-            <p className="text-white/80">Volunteers distributing clothes to families in need</p>
+        {/* Featured images */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto mb-12">
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+            <img
+              src={media.clothing1}
+              alt="Clothing Distribution Drive"
+              className="w-full h-80 md:h-96 object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+              <h3 className="text-white text-2xl md:text-3xl font-bold mb-2">Our Clothing Drives in Action</h3>
+              <p className="text-white/80">Volunteers distributing clothes to families in need</p>
+            </div>
+          </div>
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+            <img
+              src={media.clothing2}
+              alt="Clothing distribution to families in need"
+              className="w-full h-80 md:h-96 object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
           </div>
         </div>
 

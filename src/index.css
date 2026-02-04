@@ -126,6 +126,11 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  /* Slightly larger body text; headings compensated below so they stay the same size */
+  html {
+    font-size: 1.125rem; /* 18px (was 16px) */
+  }
+
   body {
     @apply text-foreground font-sans;
     background: 
@@ -137,9 +142,16 @@ All colors MUST be HSL.
     min-height: 100vh;
   }
 
+  /* Keep heading sizes unchanged at 18px root (equivalent to 16px root) */
   h1, h2, h3, h4, h5, h6 {
     @apply font-bold text-foreground;
   }
+  h1 { font-size: 4rem !important; }      /* ~72px – hero / large titles */
+  h2 { font-size: 2.5rem !important; }    /* 45px – section titles */
+  h3 { font-size: 1.875rem !important; }  /* ~34px – card titles */
+  h4 { font-size: 1.5rem !important; }    /* 27px */
+  h5 { font-size: 1.25rem !important; }   /* 22.5px */
+  h6 { font-size: 1.125rem !important; }  /* 20px */
 
   .gradient-primary {
     background: var(--gradient-primary);
