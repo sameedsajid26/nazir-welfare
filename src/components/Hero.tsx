@@ -15,22 +15,22 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-[90vh] flex items-center overflow-hidden">
-      {/* Video/Image Background */}
-      <div className="absolute inset-0 z-0">
+    <section id="home" className="relative min-h-screen md:min-h-[90vh] flex flex-col md:flex-row md:items-center overflow-hidden">
+      {/* Background: fill viewport on mobile, cover section on desktop */}
+      <div className="absolute inset-0 z-0 min-h-full min-w-full">
         <img 
           src={media.pump4} 
           alt="Water pump installation" 
-          className="w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover object-center"
         />
         {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
       </div>
       
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="relative z-10 flex-1 flex flex-col md:items-center w-full container mx-auto px-4 pt-10 pb-20 md:py-12">
         <div className="max-w-4xl mx-auto text-center">
           {/* Main heading */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white drop-shadow-lg">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6 leading-tight text-white drop-shadow-lg">
             A Beacon of{" "}
             <span className="text-accent">Hope</span>
             <br />
@@ -38,14 +38,14 @@ const Hero = () => {
           </h1>
           
           {/* Mission statement */}
-          <p className="text-lg md:text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed drop-shadow">
+          <p className="text-lg md:text-xl text-white/90 mb-5 md:mb-8 max-w-3xl mx-auto leading-relaxed drop-shadow">
             Welcome to Nazir Welfare – a catalyst for community change. We transform lives by 
             addressing the essential needs of water, nourishment, and dignity. With your support, 
             we bring clean water, nourishing meals, and much-needed relief to communities in need.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 md:mb-12">
             <Button 
               size="lg" 
               className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 py-6"
@@ -65,7 +65,7 @@ const Hero = () => {
           </div>
 
           {/* Impact stats */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mt-10 sm:mt-16">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mt-6 md:mt-16">
             <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg p-4 sm:p-6 text-center hover:bg-white/20 transition-all duration-300">
               <div className="w-10 h-10 sm:w-14 sm:h-14 mx-auto mb-3 sm:mb-4 rounded-full bg-primary/80 flex items-center justify-center">
                 <Droplets className="w-5 h-5 sm:w-7 sm:h-7 text-white" />
