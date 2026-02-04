@@ -87,7 +87,7 @@ const Stories = () => {
               <p className="text-sm text-muted-foreground">Families Supported</p>
             </div>
             <div>
-              <div className="text-2xl md:text-3xl font-bold text-accent mb-2">50+</div>
+              <div className="text-2xl md:text-3xl font-bold text-accent mb-2">200+</div>
               <p className="text-sm text-muted-foreground">Water Pumps Installed</p>
             </div>
             <div>
