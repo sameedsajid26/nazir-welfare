@@ -65,29 +65,29 @@ const Hero = () => {
           </div>
 
           {/* Impact stats */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-16">
-            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300">
-              <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-primary/80 flex items-center justify-center">
-                <Droplets className="w-7 h-7 text-white" />
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mt-10 sm:mt-16">
+            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg p-4 sm:p-6 text-center hover:bg-white/20 transition-all duration-300">
+              <div className="w-10 h-10 sm:w-14 sm:h-14 mx-auto mb-3 sm:mb-4 rounded-full bg-primary/80 flex items-center justify-center">
+                <Droplets className="w-5 h-5 sm:w-7 sm:h-7 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-2">Clean Water</h3>
-              <p className="text-white/80 text-sm">Hand pump installations bringing life to communities</p>
+              <h3 className="text-lg sm:text-2xl font-bold text-white mb-1 sm:mb-2">Clean Water</h3>
+              <p className="text-white/80 text-xs sm:text-sm">Hand pump installations bringing life to communities</p>
             </div>
             
-            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300">
-              <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-accent/80 flex items-center justify-center">
-                <Gift className="w-7 h-7 text-white" />
+            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg p-4 sm:p-6 text-center hover:bg-white/20 transition-all duration-300">
+              <div className="w-10 h-10 sm:w-14 sm:h-14 mx-auto mb-3 sm:mb-4 rounded-full bg-accent/80 flex items-center justify-center">
+                <Gift className="w-5 h-5 sm:w-7 sm:h-7 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-2">Nourishment</h3>
-              <p className="text-white/80 text-sm">Ramadan drives and food distribution programs</p>
+              <h3 className="text-lg sm:text-2xl font-bold text-white mb-1 sm:mb-2">Nourishment</h3>
+              <p className="text-white/80 text-xs sm:text-sm">Ramadan drives and food distribution programs</p>
             </div>
             
-            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300">
-              <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-emerald-600/80 flex items-center justify-center">
-                <Users className="w-7 h-7 text-white" />
+            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg p-4 sm:p-6 text-center hover:bg-white/20 transition-all duration-300">
+              <div className="w-10 h-10 sm:w-14 sm:h-14 mx-auto mb-3 sm:mb-4 rounded-full bg-emerald-600/80 flex items-center justify-center">
+                <Users className="w-5 h-5 sm:w-7 sm:h-7 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-2">Dignity</h3>
-              <p className="text-white/80 text-sm">Clothing and essential support for families</p>
+              <h3 className="text-lg sm:text-2xl font-bold text-white mb-1 sm:mb-2">Dignity</h3>
+              <p className="text-white/80 text-xs sm:text-sm">Clothing and essential support for families</p>
             </div>
           </div>
         </div>

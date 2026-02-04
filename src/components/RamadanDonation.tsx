@@ -16,30 +16,30 @@ const RamadanDonation = () => {
       {/* Ramadan-themed background */}
       <div className="absolute inset-0 bg-gradient-to-br from-amber-900/20 via-purple-900/10 to-indigo-900/20 dark:from-amber-900/40 dark:via-purple-900/30 dark:to-indigo-900/40"></div>
       
-      {/* Decorative elements */}
+      {/* Decorative elements – smaller/hidden on mobile to avoid overlap */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        <div className="absolute top-10 left-[10%] text-amber-500/20 dark:text-amber-400/30">
-          <Moon className="w-32 h-32" />
+        <div className="absolute top-4 left-2 w-16 h-16 md:top-10 md:left-[10%] md:w-32 md:h-32 text-amber-500/15 dark:text-amber-400/20 md:text-amber-500/20 md:dark:text-amber-400/30">
+          <Moon className="w-full h-full" />
         </div>
-        <div className="absolute top-20 right-[15%] text-amber-500/15 dark:text-amber-400/25">
+        <div className="hidden md:block absolute top-20 right-[15%] text-amber-500/15 dark:text-amber-400/25">
           <Star className="w-16 h-16" />
         </div>
-        <div className="absolute bottom-20 left-[20%] text-amber-500/15 dark:text-amber-400/25">
+        <div className="hidden md:block absolute bottom-20 left-[20%] text-amber-500/15 dark:text-amber-400/25">
           <Star className="w-12 h-12" />
         </div>
-        <div className="absolute top-40 right-[25%] text-amber-500/10 dark:text-amber-400/20">
+        <div className="hidden md:block absolute top-40 right-[25%] text-amber-500/10 dark:text-amber-400/20">
           <Star className="w-8 h-8" />
         </div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 relative z-10 pt-12 md:pt-0">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/20 border border-amber-500/30 mb-6">
-            <Moon className="w-4 h-4 text-amber-500" />
-            <span className="text-sm font-medium text-amber-600 dark:text-amber-400">Ramadan Special</span>
-            <Sparkles className="w-4 h-4 text-amber-500" />
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-amber-500/20 border border-amber-500/30 mb-4 md:mb-6">
+            <Moon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-500" />
+            <span className="text-xs sm:text-sm font-medium text-amber-600 dark:text-amber-400">Ramadan Special</span>
+            <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-500" />
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 md:mb-6 leading-tight">
             <span className="bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 bg-clip-text text-transparent">Ramadan</span> Iftar & Sehri Drives
           </h2>
           <p className="text-lg text-muted-foreground">

@@ -34,15 +34,16 @@ const ClothingSection = () => {
       <div className="absolute bottom-20 left-10 w-72 h-72 bg-teal-500/10 rounded-full blur-3xl"></div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-6">
-            <Sparkles className="w-4 h-4 text-emerald-500" />
-            <span className="text-sm font-medium text-emerald-600 dark:text-emerald-400">Dignity Through Clothing</span>
+        <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-4 md:mb-6">
+            <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-500" />
+            <span className="text-xs sm:text-sm font-medium text-emerald-600 dark:text-emerald-400">Dignity Through Clothing</span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-emerald-600 to-teal-500 bg-clip-text text-transparent">Clothing</span> for Those in Need
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 md:mb-6 leading-tight px-1">
+            <span className="bg-gradient-to-r from-emerald-600 to-teal-500 bg-clip-text text-transparent">Clothing</span>{" "}
+            for Those in Need
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-base sm:text-lg text-muted-foreground">
             Everyone deserves to dress with dignity. Our clothing initiatives ensure that families have access to 
             quality garments throughout the year, bringing warmth and joy to countless lives.
           </p>
