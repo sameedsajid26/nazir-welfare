@@ -26,15 +26,19 @@ export const media = {
   /** Ramadan / iftar drives (promo images) */
   ramadanDrive: `${CLOUDINARY_BASE}/image/upload/v1769954433/generate_a_few_images_shooeing_ramadan_drives_for_my_website_promotionseher_and_iftar_drives_image_1_1_hjs4fu.png`,
   iftarDrive: `${CLOUDINARY_BASE}/image/upload/v1769954433/give_them_as_seperate_images_image_4_zysibt.png`,
+  /** Clothing (Ramadan section: single image; Clothing section: two images) */
+  clothingDrive: `${CLOUDINARY_BASE}/image/upload/v1769954433/give_them_as_seperate_images_image_4_zysibt.png`,
+  clothing1: `${CLOUDINARY_BASE}/image/upload/v1770218123/clothing1_upsa5k.jpg`,
+  clothing2: `${CLOUDINARY_BASE}/image/upload/v1770218123/clothing2_f5q87y.jpg`,
 
   /** Videos */
   vid1: `${CLOUDINARY_BASE}/video/upload/v1769954433/vid1_irewif.mp4`,
   vid2: `${CLOUDINARY_BASE}/video/upload/v1769954435/vid2_lq5ar3.mp4`,
 } as const;
 
-/** Path-based assets (e.g. clothing-drive) – use asset() so VITE_ASSETS_URL or local public/ applies. Add Cloudinary URL above when available. */
+/** Path-based assets – use asset() so VITE_ASSETS_URL or local public/ applies. Add Cloudinary URL to media above when available. */
 export const mediaPaths = {
-  clothingDrive: "/clothing-drive.png",
+  // Add any future path-based assets here (e.g. "/some-image.png")
 } as const;
 
 export type MediaKey = keyof typeof media;

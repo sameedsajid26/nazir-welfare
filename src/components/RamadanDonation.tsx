@@ -1,8 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Moon, Star, Heart, ArrowUp, Sparkles } from "lucide-react";
-import { asset } from "@/lib/assets";
-import { media, mediaPaths } from "@/lib/media";
+import { media } from "@/lib/media";
 
 const RamadanDonation = () => {
   const scrollToDonate = () => {
@@ -65,9 +64,9 @@ const RamadanDonation = () => {
           </div>
           
           <div className="relative group overflow-hidden rounded-2xl shadow-xl">
-            <img 
-              src={asset(mediaPaths.clothingDrive)} 
-              alt="Clothing Distribution" 
+            <img
+              src={media.clothingDrive}
+              alt="Clothing Distribution"
               className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
